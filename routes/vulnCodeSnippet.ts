@@ -99,6 +99,7 @@ export const retrieveCodeSnippet = async (key: string) => {
   if (challenge) {
     if (cache[challenge.key]) {
       return cache[challenge.key]
+      const match = new RegExp(`vuln-code-snippet start.*${challenge.key}`)
     } else {
       const match = new RegExp(`vuln-code-snippet start.*${challenge.key}`)
       const matches = await fileSniff(SNIPPET_PATHS, match)
