@@ -15,11 +15,11 @@ import { Router } from '@angular/router'
 import { SocketIoService } from '../Services/socket-io.service'
 import { LanguagesService } from '../Services/languages.service'
 import { MatSnackBar } from '@angular/material/snack-bar'
-import { BasketService } from '../Services/basket.service'
+import { BasketService } from '../Services/basket.service
 
 import {
-  faBomb,
-  faComment,
+  faBomb
+  faComment
   faInfoCircle,
   faLanguage,
   faMapMarker,
@@ -72,7 +72,7 @@ export class NavbarComponent implements OnInit {
     private readonly snackBar: MatSnackBar, private readonly basketService: BasketService) { }
 
   ngOnInit () {
-    this.getLanguages()
+    this.
     this.basketService.getItemTotal().subscribe(x => (this.itemTotal = x))
     this.administrationService.getApplicationVersion().subscribe((version: any) => {
       if (version) {
